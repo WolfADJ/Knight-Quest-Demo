@@ -1,4 +1,12 @@
 import random
+def ded():
+    text_file.write("Death")
+    text_file.close()
+    death=input("")
+    if death==6:
+        dead=1
+    else:
+        quit()
 text_file=open("Endings.txt", "w")
 print("Disclamer: This is a demo asuch all gameplay is subject to change")
 print("")
@@ -33,22 +41,10 @@ if accept=="1":
     useless=0
 elif accept=="2":
     print("A pity I was told you were the best, but it seems that pride bilds you")
-    text_file.write("Death")
-    text_file.close()
-    death=input("")
-    if death==6:
-        dead=1
-    else:
-        quit()
+    ded()
 else:
     print("How dare you speak to your king in that way, guards!")
-    text_file.write("Death")
-    text_file.close()
-    death=input("")
-    if death==6:
-        dead=1
-    else:
-        quit()
+    ded()
 print("Your travels begin and soon after leaving the walls of the city you arive")
 print("at a forest. You proced forward and find an old woman laying in a clearing.")
 print("You note that you can hear her crying. Will you help her?")
@@ -59,13 +55,7 @@ help_1=input("")
 if help_1=="1":
     print("The woman hold a knife to your throat and reveals they are a man in disguise")
     print("the man slits your throat and you perish.")
-    text_file.write("Death")
-    text_file.close()
-    death=input("")
-    if death==6:
-        dead=1
-    else:
-        quit()
+    ded()
 elif help_1=="2":
     print("You continue onwards on your quest. To avoid the woman was a great idea")
     print("after all you remeber hearing that canibles in disguses live in these woods.")
@@ -74,13 +64,7 @@ else:
     if arrow==(1):
         print("You pull out your bow but before you can shoot an arrow hits you in your")
         print("neck killing you instantly.")
-        text_file.write("Death")
-        text_file.close()
-        death=input("")
-        if death==6:
-            dead=1
-        else:
-            quit()
+        ded()
     else:
         print("You fire an arrow but miss. The woman turns around revieling them to be")
         print("a man in disguise. Fearing for the worst you ride off to continue your quest.")
@@ -109,13 +93,7 @@ while while_1==0:
                 print("You go out of the house and find a group of people chanting in a circle one them spots you and")
                 print("starts to screach at you, alerting the others. The all turn to face you and as you draw your sword")
                 print("a ball of fire hits you and boils you in your armour.")
-                text_file.write("Death")
-                text_file.close()
-                death=input("")
-                if death==6:
-                    dead=1
-                else:
-                    quit()
+                ded()
             else:
                 print("You continue to rest in peace and wake up well rested the next morning, and headback to the split in the road.")
                 bridge_1=1
@@ -137,13 +115,7 @@ while while_1==0:
                     swim_1=(random.randint(0, 1))
                     if swim_1==(1):
                         print("You jump into the river but your armour weighs you down and eventaly you drown")
-                        text_file.write("Death")
-                        text_file.close()
-                        death=input("")
-                        if death==6:
-                            dead=1
-                        else:
-                            quit()
+                        ded()
                     else:
                         print("You swim across the river with relative ease and ride your horse onwards")
                         bridge_1=1
@@ -151,26 +123,14 @@ while while_1==0:
                 elif river_1=="2":
                     print("You head home knowing there is no way to cross safely. You report the probblem to")
                     print("the prince but he his so upset that you have failed that he has you exicuted.")
-                    text_file.write("Death")
-                    text_file.close()
-                    death=input("")
-                    if death==6:
-                        dead=1
-                    else:
-                        quit()
+                    ded()
                 else:
                     print("You call for help but no one responds and knowing that little time remains to save the king,")
                     print("you swim across the river not careing about your armour weighing you down.")
                     swim_2=(random.randint(0,1))
                     if swim_2==(1):
                         print("You jump into the river but your armour weighs you down and eventaly you drown")
-                        text_file.write("Death")
-                        text_file.close()
-                        death=input("")
-                        if death==6:
-                            dead=1
-                        else:
-                            quit()
+                        ded()
                     else:
                         print("You swim across the river with relative ease and ride your horse onwards")
                         bridge_1=1
@@ -180,16 +140,12 @@ while while_1==0:
                 print("Loading backup file...")
                 print("File conclusion:")
                 print("Termanation")
+                text_file.write("Terminated")
+                text_file.close()
                 quit()
             else:
                 print("You return home and the king dies, the prince seaks you out and has you exicuted.")
-                text_file.write("Death")
-                text_file.close()
-                death=input("")
-                if death==6:
-                    dead=1
-                else:
-                    quit()
+                ded()
     elif road_1=="2":
         print("You travel down the road and find a bridge with an angry mob on the other side.")
         print("You ride acrros the bridge and are greeted with the yells of the mob.")
@@ -198,13 +154,7 @@ while while_1==0:
         while_1=1
     else:
         print("You return home and the king dies, the prince seaks you out and has you exicuted.")
-        text_file.write("Death")
-        text_file.close()
-        death=input("")
-        if death==6:
-            dead=1
-        else:
-            quit()
+        ded()
 if bridge_1==(0):
     print("You return to the split in the road and go down the second road.")
     print("You come across the remains of a bridge.")
@@ -217,38 +167,20 @@ if bridge_1==(0):
         swim_1=(random.randint(0, 1))
         if swim_1==(1):
             print("You jump into the river but your armour weighs you down and eventaly you drown.")
-            text_file.write("Death")
-            text_file.close()
-            death=input("")
-            if death==6:
-                dead=1
-            else:
-                quit()
+            ded()
         else:
             print("You swim across the river with relative ease and ride your horse onwards.")
     elif river_1=="2":
         print("You head home knowing there is no way to cross safely. You report the probblem to")
         print("the prince but he his so upset that you have failed that he has you exicuted.")
-        text_file.write("Death")
-        text_file.close()
-        death=input("")
-        if death==6:
-            dead=1
-        else:
-            quit()
+        ded()
     else:
         print("You call for help but no one responds and knowing that little time remains to save the king,")
         print("you swim across the river not careing about your armour weighing you down.")
         swim_2=(random.randint(0,1))
         if swim_2==(1):
             print("You jump into the river but your armour weighs you down and eventaly you drown.")
-            text_file.write("Death")
-            text_file.close()
-            death=input("")
-            if death==6:
-                dead=1
-            else:
-                quit()
+            ded()
         else:
             print("You swim across the river with relative ease and ride your horse onwards.")
 else:
@@ -434,13 +366,7 @@ if camp_2=="1":
         while gobllin1armour>0 or gobllin2armour>0 or gobllin3armour>0:
             if hp<=0:
                 print("You have died in battle.")
-                text_file.write("Death")
-                text_file.close()
-                death=input("")
-                if death==6:
-                    dead=1
-                else:
-                    quit()
+                ded()
             else:
                 print("Hp:", hp)
                 print("gobllin_1 hp:", gobllin1armour, "gobllin_2 hp:", gobllin2armour, "gobllin_3 hp:", gobllin3armour)
@@ -522,13 +448,7 @@ if camp_2=="1":
                             hp=hp-1
                 else:
                     print("You try to run but you're shot down by one of the gobllins.")
-                    text_file.write("Death")
-                    text_file.close()
-                    death=input("")
-                    if death==6:
-                        dead=1
-                    else:
-                        quit()
+                    ded()
     else:
         print("You go back to sleep and rest happily.")
         if gold>=5:
@@ -539,13 +459,7 @@ if camp_2=="1":
 elif camp_2=="2":
     print("You continue on but eventally you loose direction and fall into a revine")
     print("and die from the fall.")
-    text_file.write("Death")
-    text_file.close()
-    death=input("")
-    if death==6:
-        dead=1
-    else:
-        quit()
+    ded()
 else:
     print("You start to make your way back to the town but night falls quickly.")
     if co==1:
@@ -640,13 +554,7 @@ while nagahp>0 or nagihp>0:
                         print("You miss your attack and doddge the enemy's attack")
         else:
             print("You try to run but are shot down by one of the naga")
-            text_file.write("Death")
-            text_file.close()
-            death=input("")
-            if death==6:
-                dead=1
-            else:
-                quit()
+            ded()
 print("You beat the nagas. As you walk over there lifeless bodys you find a bag with 100 gold and a map with a marked location")
 gold=gold+100
 while_3=0
@@ -663,13 +571,7 @@ while while_3==0:
     else:
         if hunger==(random.randint(3,10)):
             print("You die from hunger.")
-            text_file.write("Death")
-            text_file.close()
-            death=input("")
-            if death==6:
-                dead=1
-            else:
-                quit()
+            ded()
         else:
             if nagameat==0:
                 print("You sleep for the night but the lack of food makes you weaker.")
@@ -804,10 +706,8 @@ fort=input("")
 if fort=="2":
     print("You return home and the king dies. The prince seeks you out and has you exicuted for treason.")
     print("You got the Coward ending")
-    
     text_file.write("Coward Ending/n")
     text_file.close()
-    
     quit()
 else:
     useless=useless+1
