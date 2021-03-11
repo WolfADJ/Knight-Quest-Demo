@@ -1,6 +1,7 @@
 import random
 def ded():
-    text_file.write("Death")
+    text_file.write(name + "\n")
+    text_file.write("Death\n")
     text_file.close()
     death=input("")
     if death==6:
@@ -706,7 +707,8 @@ fort=input("")
 if fort=="2":
     print("You return home and the king dies. The prince seeks you out and has you exicuted for treason.")
     print("You got the Coward ending")
-    text_file.write("Coward Ending/n")
+    text_file.write(name + "\n")
+    text_file.write("Coward Ending\n")
     text_file.close()
     quit()
 else:
@@ -721,7 +723,8 @@ fort_2=input("")
 if fort_2=="2":
     print("You return home and the king dies. The prince seeks you out and has you exicuted for treason.")
     print("You got the Coward ending")
-    text_file.write("Coward Ending/n")
+    text_file.write(name + "\n")
+    text_file.write("Coward Ending\n")
     text_file.close()
     quit()
 elif fort_2=="1":
@@ -736,12 +739,14 @@ demo_end=input("")
 if demo_end=="1":
     print("You drink from the goblet and stay with the king waiting for the next person to be guided.")
     print("You got the Guardian Ending")
-    text_file.write("Guardian Ending/n")
+    text_file.write(name + "\n")
+    text_file.write("Guardian Ending\n")
     text_file.close()
     quit()
 else:
     print("You return home and deliver the goblet, saving the kingdom. You were remembered as a hero forever.")
     print("You got the Hero Ending")
-    text_file.write("Hero Ending/n")
+    text_file.write(name + "\n")
+    text_file.write("Hero Ending\n")
     text_file.close()
     quit()
