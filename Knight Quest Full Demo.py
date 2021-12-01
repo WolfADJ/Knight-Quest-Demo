@@ -143,7 +143,10 @@ while while_1==0:
                 print("Termanation")
                 text_file.write("Terminated")
                 text_file.close()
-                quit()
+                if death==6:
+                    dead=1
+                else:
+                    quit()
             else:
                 print("You return home and the king dies, the prince seaks you out and has you exicuted.")
                 ded()
@@ -491,7 +494,7 @@ while left<(random.randint(1, 10)) or forward<(random.randint(1, 10)) or right<(
         print("You walk right")
         right=right+1
 print("You find your way to a large clearing with no fog.")
-print("In the center you see a naga and nagi playing music.")
+print("In the center you see a two nagas standing guard.")
 print("They spot you and attack.")
 nagahp=10
 nagaarmour=1
@@ -501,7 +504,7 @@ fight_1=0
 while nagahp>0 or nagihp>0:
     if hp<=0:
         print("You have died in battle.")
-        quit()
+        ded()
     else:
         print("Hp:", hp)
         print("Naga_1 hp:", nagahp, "Naga_2 hp:", nagihp)
@@ -710,7 +713,10 @@ if fort=="2":
     text_file.write(name + "\n")
     text_file.write("Coward Ending\n")
     text_file.close()
-    quit()
+    if death==6:
+        dead=1
+    else:
+        quit()
 else:
     useless=useless+1
 print("You enter the fortress and find an old king sitting on a throne with a goblet.")
@@ -726,7 +732,10 @@ if fort_2=="2":
     text_file.write(name + "\n")
     text_file.write("Coward Ending\n")
     text_file.close()
-    quit()
+    if death==6:
+        dead=1
+    else:
+        quit()
 elif fort_2=="1":
     print("You draw you sword and attack the king. Your sword easily goes through him but no blood is drawn.")
     print("The king ignores that you attacked him and hands you the Goblet.")
@@ -742,11 +751,17 @@ if demo_end=="1":
     text_file.write(name + "\n")
     text_file.write("Guardian Ending\n")
     text_file.close()
-    quit()
+    if death==6:
+        dead=1
+    else:
+        quit()
 else:
     print("You return home and deliver the goblet, saving the kingdom. You were remembered as a hero forever.")
     print("You got the Hero Ending")
     text_file.write(name + "\n")
     text_file.write("Hero Ending\n")
     text_file.close()
-    quit()
+    if death==6:
+        dead=1
+    else:
+        quit()
